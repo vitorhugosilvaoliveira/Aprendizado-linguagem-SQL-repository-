@@ -1,7 +1,7 @@
 # Aprendizado-linguagem-SQL-repository-
 ## Sobre o repositório :
 O repositório receberá atualizações constantes sobre a linguagem SQL,
-os arquivos serão desenvolvidos usando PostgreSQL no DBeaver e documentarei todo aprendizado da faculdade neste documento README.md 
+os arquivos serão desenvolvidos usando PostgreSQL no DBeaver e documentarei todo aprendizado da faculdade neste documento README.md. 
 
 ## TIPOS DE COMANDOS SQL
 #### DDL (Linguagem de Definição de Dados)
@@ -57,3 +57,32 @@ UPDATE Products SET Product_Name = 'celular', Price = 2300.00 WHERE Product_ID =
 ```
 DELETE from Products WHERE Product_ID = 1;
 ```
+## SQL
+
+### Estrutura básica de consulta
+```
+SELECT codigo FROM produtos
+```
+### Filtragem e Ordenação
+
+WHERE - filtra registros com condições específicas.
+ORDER BY - Ordena resultados em ordem ascendente ou descendente.
+
+### Ferramentas avançadas de seleção
+
+DISTINCT - Remove duplicatas.
+TOP / LIMIT - Especifica número de registros retornados.
+
+### Aliases (AS)
+
+Usados para dar nome temporário a tabelas ou colunas para tornar os resultados mais legíveis.
+
+### Ordem lógica de avaliação
+
+*SQL não processa cláusulas na ordem esccrita*
+
+*A execução padrão lógica é:*
+1. FROM
+2. WHERE
+3. SELECT
+4. ORDER BY
