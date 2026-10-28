@@ -1,4 +1,4 @@
-# Procedures/Functions (PL/pgSQL)
+# Functions (PL/pgSQL)
 ## Diferenças entre Functions e Procedures
 As **Functions** (criadas com CREATE FUNCTION) existem no PostgreSQL há décadas e são extremamente versáteis. Elas obrigatoriamente retornam um valor — que pode ser um tipo escalar, um registro, uma tabela ou até mesmo void (que na verdade retorna NULL de forma implícita).
 
@@ -47,7 +47,16 @@ Indica em qual linguagem o corpo da função está escrito. PL/pgSQL é a lingua
 
 5. ```
     AS $function$
-    ...coorpo...
+    ...corpo...
     $function$
     ```
 Os $function$ são delimitadores do corpo da função (chamados de dollar quoting). Eles servem para o PostgreSQL saber onde o código começa e termina, sem você precisar escapar aspas simples dentro dele. O nome entre os $ pode ser qualquer coisa ($$, $body$...). O DBeaver e outras ferramentas costumam gerar $function$.
+
+6. BEGIN ... END
+
+```
+BEGIN
+    REUTURN REPLACE(p_texto, p_valor_antigo, p_valor_novo);
+END
+```
+Todo corpo PL/pgSQL fica dentro de um bloco BEGIN ... END;. É onde a lógica acontece.
