@@ -1,4 +1,4 @@
-# Procedures
+# Procedures (PL/pgSQL)
 
 ## Exemplo
 ```
